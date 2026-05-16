@@ -1,115 +1,285 @@
-<!DOCTYPE html>
-</head>
+export default function LuxuryRestaurantWebsite() {
+  return (
+    <div className="bg-black text-white min-h-screen font-sans overflow-x-hidden">
+      {/* NAVBAR */}
+      <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-black/40 border-b border-white/10">
+        <div className="max-w-7xl mx-auto flex items-center justify-between px-6 py-4">
+          <h1 className="text-3xl font-black tracking-wide text-amber-400">
+            Mughal Palace
+          </h1>
 
-<body>
+          <div className="hidden md:flex gap-8 text-sm text-gray-300">
+            <a href="#menu" className="hover:text-white transition">Menu</a>
+            <a href="#about" className="hover:text-white transition">About</a>
+            <a href="#gallery" className="hover:text-white transition">Gallery</a>
+            <a href="#contact" className="hover:text-white transition">Contact</a>
+          </div>
 
-<nav>
-  <h1>Mughal Palace</h1>
+          <a
+            href="https://wa.me/919876543210"
+            className="bg-amber-400 text-black px-5 py-2 rounded-xl font-bold hover:scale-105 transition"
+          >
+            Order Now
+          </a>
+        </div>
+      </nav>
 
-  <div>
-    <a href="#menu">Menu</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-  </div>
-</nav>
+      {/* HERO */}
+      <section className="relative h-screen flex items-center justify-center text-center px-6">
+        <img
+          src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2000&auto=format&fit=crop"
+          className="absolute inset-0 w-full h-full object-cover opacity-40"
+        />
 
-<section class="hero">
-  <div class="hero-content">
-    <h2>Luxury Mughlai Dining Experience</h2>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black"></div>
 
-    <p>
-      Delicious Mughlai food, grilled chicken, Chinese dishes and premium dining experience delivered with quality and taste.
-    </p>
+        <div className="relative z-10 max-w-5xl">
+          <div className="inline-block px-4 py-2 rounded-full border border-white/20 bg-white/10 backdrop-blur-xl text-sm mb-6 text-gray-200">
+            Premium Mughlai Dining Experience
+          </div>
 
-    <a href="https://wa.me/919876543210" class="btn">
-      Order On WhatsApp
-    </a>
-  </div>
-</section>
+          <h1 className="text-5xl md:text-8xl font-black leading-tight mb-6">
+            Taste The Real <span className="text-amber-400">Luxury</span>
+          </h1>
 
-<section class="section" id="menu">
+          <p className="text-lg md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-10">
+            Experience authentic Mughlai flavors, premium ambience and unforgettable dining with handcrafted dishes made by expert chefs.
+          </p>
 
-  <div class="title">
-    <h2>Popular Dishes</h2>
-    <p>Our customer favorite items</p>
-  </div>
+          <div className="flex flex-col md:flex-row gap-4 justify-center">
+            <a
+              href="https://wa.me/919876543210"
+              className="bg-amber-400 text-black px-8 py-4 rounded-2xl font-bold text-lg hover:scale-105 transition"
+            >
+              Order On WhatsApp
+            </a>
 
-  <div class="cards">
+            <a
+              href="#menu"
+              className="border border-white/20 px-8 py-4 rounded-2xl font-semibold hover:bg-white/10 transition"
+            >
+              Explore Menu
+            </a>
+          </div>
+        </div>
+      </section>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=1200&auto=format&fit=crop">
+      {/* STATS */}
+      <section className="py-20 px-6 border-y border-white/10 bg-white/5">
+        <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div>
+            <h2 className="text-5xl font-black text-amber-400">10K+</h2>
+            <p className="text-gray-400 mt-2">Happy Customers</p>
+          </div>
 
-      <div class="card-content">
-        <h3>Chicken Biryani</h3>
-        <p>Authentic dum biryani cooked with premium spices and juicy chicken.</p>
-      </div>
+          <div>
+            <h2 className="text-5xl font-black text-amber-400">50+</h2>
+            <p className="text-gray-400 mt-2">Luxury Dishes</p>
+          </div>
+
+          <div>
+            <h2 className="text-5xl font-black text-amber-400">4.9★</h2>
+            <p className="text-gray-400 mt-2">Customer Rating</p>
+          </div>
+
+          <div>
+            <h2 className="text-5xl font-black text-amber-400">24/7</h2>
+            <p className="text-gray-400 mt-2">Online Orders</p>
+          </div>
+        </div>
+      </section>
+
+      {/* MENU */}
+      <section id="menu" className="py-28 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-black mb-4">
+              Signature Dishes
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Crafted with premium ingredients and authentic flavors.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              {
+                title: "Chicken Biryani",
+                image:
+                  "https://images.unsplash.com/photo-1701579231305-d84d8af9a3fd?q=80&w=1200&auto=format&fit=crop",
+                desc: "Aromatic dum biryani with rich Mughlai spices.",
+              },
+              {
+                title: "Tandoori Chicken",
+                image:
+                  "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?q=80&w=1200&auto=format&fit=crop",
+                desc: "Perfectly grilled smoky tandoori chicken.",
+              },
+              {
+                title: "Butter Chicken",
+                image:
+                  "https://images.unsplash.com/photo-1603893662172-99ed0cea2a08?q=80&w=1200&auto=format&fit=crop",
+                desc: "Creamy buttery curry with tender chicken.",
+              },
+            ].map((dish, index) => (
+              <div
+                key={index}
+                className="bg-white/5 border border-white/10 rounded-[30px] overflow-hidden hover:scale-105 transition duration-300 shadow-2xl"
+              >
+                <img
+                  src={dish.image}
+                  className="w-full h-72 object-cover"
+                />
+
+                <div className="p-8">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-2xl font-bold">{dish.title}</h3>
+                    <span className="text-amber-400 font-bold">₹399</span>
+                  </div>
+
+                  <p className="text-gray-400 leading-relaxed mb-6">
+                    {dish.desc}
+                  </p>
+
+                  <button className="w-full bg-amber-400 text-black py-3 rounded-xl font-bold hover:scale-105 transition">
+                    Order Now
+                  </button>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT */}
+      <section id="about" className="py-28 px-6 bg-white/5 border-y border-white/10">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-14 items-center">
+          <div>
+            <img
+              src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1600&auto=format&fit=crop"
+              className="rounded-[40px] shadow-2xl"
+            />
+          </div>
+
+          <div>
+            <div className="inline-block px-4 py-2 rounded-full bg-amber-400/20 text-amber-300 text-sm mb-6 border border-amber-400/20">
+              About Our Restaurant
+            </div>
+
+            <h2 className="text-5xl md:text-6xl font-black leading-tight mb-6">
+              Fine Dining Meets Authentic Taste
+            </h2>
+
+            <p className="text-gray-400 text-lg leading-relaxed mb-6">
+              Mughal Palace combines luxury ambience with authentic Mughlai cuisine crafted by experienced chefs using premium ingredients and traditional cooking methods.
+            </p>
+
+            <p className="text-gray-400 text-lg leading-relaxed mb-10">
+              From family dinners to celebrations and online ordering, we deliver unforgettable taste experiences for every customer.
+            </p>
+
+            <a
+              href="https://wa.me/919876543210"
+              className="bg-amber-400 text-black px-8 py-4 rounded-2xl font-bold inline-block hover:scale-105 transition"
+            >
+              Reserve Your Table
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* GALLERY */}
+      <section id="gallery" className="py-28 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-black mb-4">
+              Restaurant Gallery
+            </h2>
+            <p className="text-gray-400 text-lg">
+              Premium atmosphere and delicious food moments.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+            {[
+              "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1200&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1559339352-11d035aa65de?q=80&w=1200&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?q=80&w=1200&auto=format&fit=crop",
+              "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1200&auto=format&fit=crop",
+            ].map((img, i) => (
+              <img
+                key={i}
+                src={img}
+                className="rounded-[25px] h-72 w-full object-cover hover:scale-105 transition duration-300"
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* REVIEWS */}
+      <section className="py-28 px-6 bg-white/5 border-y border-white/10">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-5xl md:text-6xl font-black mb-4">
+              Customer Reviews
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              "Amazing ambience and the best butter chicken I have ever had.",
+              "Luxury restaurant experience with fast service and delicious food.",
+              "Beautiful interior, premium quality and excellent hospitality.",
+            ].map((review, index) => (
+              <div
+                key={index}
+                className="bg-black border border-white/10 rounded-[30px] p-8"
+              >
+                <div className="text-amber-400 text-2xl mb-4">★★★★★</div>
+                <p className="text-gray-300 leading-relaxed mb-6">
+                  {review}
+                </p>
+                <h4 className="font-bold">Happy Customer</h4>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="contact" className="py-28 px-6">
+        <div className="max-w-6xl mx-auto rounded-[40px] border border-white/10 bg-gradient-to-r from-amber-500/20 to-orange-500/10 p-14 text-center backdrop-blur-xl">
+          <h2 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
+            Order Delicious Food Today
+          </h2>
+
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
+            Reserve your table or place your online order directly through WhatsApp for a premium dining experience.
+          </p>
+
+          <a
+            href="https://wa.me/919876543210"
+            className="bg-amber-400 text-black px-10 py-5 rounded-2xl text-lg font-black inline-block hover:scale-105 transition"
+          >
+            Chat On WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* FOOTER */}
+      <footer className="border-t border-white/10 py-10 text-center text-gray-500 text-sm">
+        © 2026 Mughal Palace — Luxury Dining Experience
+      </footer>
+
+      {/* FLOATING BUTTON */}
+      <a
+        href="https://wa.me/919876543210"
+        className="fixed bottom-6 right-6 bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:scale-110 transition z-50"
+      >
+        💬
+      </a>
     </div>
+  );
+}
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1565557623262-b51c2513a641?q=80&w=1200&auto=format&fit=crop">
-
-      <div class="card-content">
-        <h3>Tandoori Chicken</h3>
-        <p>Smoky grilled chicken marinated with signature Mughlai spices.</p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1512058564366-18510be2db19?q=80&w=1200&auto=format&fit=crop">
-
-      <div class="card-content">
-        <h3>Butter Chicken</h3>
-        <p>Creamy tomato gravy with tender chicken and buttery richness.</p>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<section class="section" id="about">
-
-  <div class="about">
-
-    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1200&auto=format&fit=crop">
-
-    <div class="about-text">
-      <h2>About Our Restaurant</h2>
-
-      <p>
-        Mughal Palace brings together authentic Mughlai flavors, luxury dining atmosphere and premium quality food experience.
-      </p>
-
-      <br>
-
-      <p>
-        From grilled chicken to rich curries and Chinese fusion dishes, we serve unforgettable taste with fast service.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<section class="section">
-
-  <div class="contact" id="contact">
-
-    <h2>Book Your Table</h2>
-
-    <p>
-      Contact us on WhatsApp for reservations, home delivery and catering.
-    </p>
-
-    <a href="https://wa.me/919876543210" class="btn">
-      Chat On WhatsApp
-    </a>
-
-  </div>
-
-</section>
-
-<footer>
-  © 2026 Mughal Palace Restaurant — Premium Dining Experience
-</footer>
-
-</body>
-</html>
