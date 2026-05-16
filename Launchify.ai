@@ -1,0 +1,299 @@
+export default function IdeaForgeAI() {
+  const services = [
+    {
+      title: "AI Startup Launch",
+      desc: "Turn your idea into a professional business with branding, landing pages, and launch systems.",
+    },
+    {
+      title: "Website Development",
+      desc: "Modern luxury websites for startups, restaurants, agencies, and online businesses.",
+    },
+    {
+      title: "AI Automation",
+      desc: "Automate customer support, lead collection, and marketing with AI-powered systems.",
+    },
+  ];
+
+  const demos = [
+    "Restaurant Website",
+    "Funds Recovery Platform",
+    "AI Coaching Brand",
+    "Real Estate Funnel",
+  ];
+
+  const pricing = [
+    {
+      title: "Starter Launch",
+      price: "₹4,999",
+      features: [
+        "Landing Page",
+        "WhatsApp Integration",
+        "Basic Branding",
+      ],
+    },
+    {
+      title: "Business Pro",
+      price: "₹14,999",
+      features: [
+        "Full Website",
+        "AI Chatbot",
+        "Instagram Branding",
+        "Lead Funnel",
+      ],
+    },
+    {
+      title: "Elite AI Launch",
+      price: "₹49,999+",
+      features: [
+        "Business Automation",
+        "CRM Setup",
+        "AI Workflows",
+        "Marketing Systems",
+      ],
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Navbar */}
+      <header className="flex items-center justify-between px-8 py-6 border-b border-gray-800">
+        <h1 className="text-2xl font-bold tracking-wide text-yellow-400">
+          IdeaForge AI
+        </h1>
+
+        <nav className="hidden md:flex gap-8 text-sm text-gray-300">
+          <a href="#services" className="hover:text-white transition">
+            Services
+          </a>
+          <a href="#projects" className="hover:text-white transition">
+            Projects
+          </a>
+          <a href="#pricing" className="hover:text-white transition">
+            Pricing
+          </a>
+          <a href="#contact" className="hover:text-white transition">
+            Contact
+          </a>
+        </nav>
+      </header>
+
+      {/* Hero Section */}
+      <section className="px-8 py-24 max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div className="inline-block px-4 py-2 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-sm mb-6">
+            AI-Powered Business Launch System
+          </div>
+
+          <h2 className="text-5xl md:text-7xl font-extrabold leading-tight">
+            Turn Your
+            <span className="text-yellow-400"> Idea </span>
+            Into a Real Business
+          </h2>
+
+          <p className="mt-6 text-lg text-gray-400 leading-relaxed max-w-xl">
+            We create websites, branding, AI automation, lead systems,
+            marketing funnels, and launch-ready business setups.
+          </p>
+
+          <div className="flex flex-wrap gap-4 mt-10">
+            <a
+              href="https://wa.me/919999999999"
+              className="bg-yellow-400 text-black px-7 py-4 rounded-2xl font-semibold hover:scale-105 transition"
+            >
+              Launch My Business
+            </a>
+
+            <a
+              href="#projects"
+              className="border border-gray-700 px-7 py-4 rounded-2xl hover:bg-gray-900 transition"
+            >
+              View Demo Projects
+            </a>
+          </div>
+        </div>
+
+        <div className="relative">
+          <div className="absolute inset-0 bg-yellow-400 blur-3xl opacity-20 rounded-full"></div>
+
+          <div className="relative bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-700 rounded-3xl p-8 shadow-2xl">
+            <div className="space-y-6">
+              <div className="bg-black/50 p-5 rounded-2xl border border-gray-800">
+                <p className="text-sm text-gray-400">Business Idea</p>
+                <h3 className="text-xl font-semibold mt-2">
+                  AI Restaurant Brand
+                </h3>
+              </div>
+
+              <div className="bg-black/50 p-5 rounded-2xl border border-gray-800">
+                <p className="text-sm text-gray-400">Generated Assets</p>
+                <ul className="mt-3 space-y-2 text-gray-300 text-sm">
+                  <li>✔ Luxury Website</li>
+                  <li>✔ AI Chatbot</li>
+                  <li>✔ Instagram Branding</li>
+                  <li>✔ Lead Funnel</li>
+                  <li>✔ WhatsApp Automation</li>
+                </ul>
+              </div>
+
+              <div className="bg-yellow-400 text-black p-5 rounded-2xl font-bold text-center text-lg">
+                Ready To Launch 🚀
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services */}
+      <section id="services" className="px-8 py-20 bg-[#0d0d0d]">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold">Our Services</h2>
+            <p className="text-gray-400 mt-4 max-w-2xl mx-auto">
+              Complete AI-powered systems to help businesses launch and grow.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {services.map((service, index) => (
+              <div
+                key={index}
+                className="bg-black border border-gray-800 rounded-3xl p-8 hover:border-yellow-400/50 transition"
+              >
+                <h3 className="text-2xl font-bold mb-4 text-yellow-400">
+                  {service.title}
+                </h3>
+                <p className="text-gray-400 leading-relaxed">
+                  {service.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Demo Projects */}
+      <section id="projects" className="px-8 py-20">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold">Demo Projects</h2>
+            <p className="text-gray-400 mt-4">
+              Sample launch-ready business systems.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {demos.map((demo, index) => (
+              <div
+                key={index}
+                className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-3xl p-10 hover:scale-[1.02] transition"
+              >
+                <div className="h-52 rounded-2xl bg-gray-800 flex items-center justify-center text-2xl font-bold text-yellow-400">
+                  {demo}
+                </div>
+
+                <button className="mt-6 w-full bg-yellow-400 text-black py-4 rounded-2xl font-semibold hover:opacity-90 transition">
+                  View Project
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process */}
+      <section className="px-8 py-20 bg-[#0d0d0d]">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-4xl font-bold">How It Works</h2>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            <div className="bg-black border border-gray-800 rounded-3xl p-8">
+              <div className="text-5xl font-bold text-yellow-400">1</div>
+              <h3 className="text-2xl font-semibold mt-6">Share Your Idea</h3>
+              <p className="text-gray-400 mt-4">
+                Tell us what business you want to launch.
+              </p>
+            </div>
+
+            <div className="bg-black border border-gray-800 rounded-3xl p-8">
+              <div className="text-5xl font-bold text-yellow-400">2</div>
+              <h3 className="text-2xl font-semibold mt-6">We Build Everything</h3>
+              <p className="text-gray-400 mt-4">
+                Branding, website, automation, and systems.
+              </p>
+            </div>
+
+            <div className="bg-black border border-gray-800 rounded-3xl p-8">
+              <div className="text-5xl font-bold text-yellow-400">3</div>
+              <h3 className="text-2xl font-semibold mt-6">Launch & Grow</h3>
+              <p className="text-gray-400 mt-4">
+                Go live professionally and start getting customers.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing */}
+      <section id="pricing" className="px-8 py-20">
+        <div className="max-w-7xl mx-auto text-center">
+          <h2 className="text-4xl font-bold">Launch Packages</h2>
+          <p className="text-gray-400 mt-4">
+            Flexible pricing for startups and businesses.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8 mt-16">
+            {pricing.map((plan, index) => (
+              <div
+                key={index}
+                className="bg-black border border-gray-800 rounded-3xl p-8 flex flex-col"
+              >
+                <h3 className="text-2xl font-bold text-yellow-400">
+                  {plan.title}
+                </h3>
+
+                <div className="text-5xl font-extrabold mt-6">
+                  {plan.price}
+                </div>
+
+                <ul className="mt-8 space-y-4 text-gray-300 flex-1">
+                  {plan.features.map((feature, idx) => (
+                    <li key={idx}>✔ {feature}</li>
+                  ))}
+                </ul>
+
+                <button className="mt-10 bg-yellow-400 text-black py-4 rounded-2xl font-semibold hover:scale-105 transition">
+                  Get Started
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section id="contact" className="px-8 py-24">
+        <div className="max-w-5xl mx-auto text-center bg-gradient-to-r from-yellow-400 to-yellow-500 text-black rounded-[40px] p-16 shadow-2xl">
+          <h2 className="text-5xl font-extrabold leading-tight">
+            Ready To Launch Your Business?
+          </h2>
+
+          <p className="mt-6 text-lg max-w-2xl mx-auto">
+            We help entrepreneurs turn ideas into real launch-ready businesses using AI systems.
+          </p>
+
+          <a
+            href="https://wa.me/919999999999"
+            className="inline-block mt-10 bg-black text-white px-10 py-5 rounded-2xl text-lg font-semibold hover:scale-105 transition"
+          >
+            Chat on WhatsApp
+          </a>
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="border-t border-gray-800 py-8 px-8 text-center text-gray-500 text-sm">
+        © 2026 IdeaForge AI — All Rights Reserved.
+      </footer>
+    </div>
+  );
+}
